@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>180 Daraga LeaderBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <script>
+        var cnt = 0;
+        function musicOn() {
+            if (cnt <= 3) {
+                var audio = new Audio('celebrate.mp3');
+                audio.play();
+                document.getElementById('gif').style.visibility = 'unset';
+                setTimeout(function () {
+                    document.getElementById('gif').style.visibility = 'hidden';
+                }, 900);
+            }
+        }
+        function top1() {
+            document.getElementById('top1_div').style.visibility = 'unset';
+            document.getElementById('top1_div').style.height = '86.5%';
+            cnt++;
+            musicOn();
+        }
+        function top2() {
+            document.getElementById('top2_div').style.visibility = 'unset';
+            document.getElementById('top2_div').style.height = '79%';
+            cnt++;
+            musicOn();
+        }
+        function top3() {
+            document.getElementById('top3_div').style.visibility = 'unset';
+            document.getElementById('top3_div').style.height = '74%';
+            cnt++;
+            musicOn();
+        }
+        function eraseSpan() {
+            document.getElementById('guess-box-span').innerHTML = `Congratulations!!&#129395;`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img class="logo" src="./images/180daraga.png" alt="logo">
+            <h1>LeaderBoard</h1>
+        </header>
+
+        <h1 class="top-3-header">Top 3</h1>
+
+
+        <div class="top3">
+            <div class="top3-1" id="top2_div">
+                <div class="actual-top">
+                    <img id="top2-img" class="top_3_all_img" src="./images/180daraga.png" alt="">
+                    <h2 id="top2-name" class="name">#2 Place</h2>
+                    <h2 class="score score-top" id="top3-score">
+                        600p
+                    </h2>
+                </div>
+            </div>
+            <div class="top3-1" id="top1_div">
+                <div class="actual-top">
+                    <div class="img-1">
+                        <img id="top1-img" class="top_3_all_img" src="./images/180daraga.png" alt="">
+                        <img class="crown" src="./images/crown.png" width="50px" alt="">
+                    </div>
+                    <h2 id="top1-name" class="name">#1 Place</h2>
+                    <h2 class="score score-top" id="top3-score">
+                        700p
+                    </h2>
+                </div>
+
+            </div>
+            <div class="top3-1" id="top3_div">
+                <div class="actual-top">
+                    <img id="top3-img" class="top_3_all_img" src="./images/180daraga.png" alt="">
+                    <h2 id="top3-name" class="name">#3 Place</h2>
+                    <h2 class="score score-top" id="top3-score">
+                        400p
+                    </h2>
+                </div>
+            </div>
+
+            <div class="style-button" onclick="eraseSpan()">
+                <a id="top2" onclick="top2()"></a>
+                <a id="top1" onclick="top1()"></a>
+                <a id="top3" onclick="top3()"></a>
+            </div>
+            <img src="./images/Podium-with-red-carpet.png" class="top3_photo" alt="top3">
+            <img src="./images/giphy (3).gif" id="gif" alt="">
+        </div>
+
+        <div id="guess-box">
+            <span id="guess-box-span">Guess who are the top 3?&#129300;
+                <br>
+                Press on stage to see!&#128064;
+            </span>
+        </div>
+
+        <div class="section2">
+            <div class="section-2-part">
+                <div class="section-2-name">
+                    <img src="./images/4th.png" alt="">
+                    <h4>4th Name</h4>
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                </div>
+                <h2 class="score" id="4-score">SCORE</h2>
+            </div>
+            <div class="section-2-part">
+                <div class="section-2-name">
+                    <img src="./images/5th.png" alt="">
+                    <h4>5th Name</h4>
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                </div>
+                <h2 class="score" id="5-score">SCORE</h2>
+            </div>
+            <div class="section-2-part">
+                <div class="section-2-name">
+                    <img src="./images/6th.png" alt="">
+                    <h4>6th Name</h4>
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD700;"></i>
+                </div>
+                <h2 class="score" id="6-score">SCORE</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

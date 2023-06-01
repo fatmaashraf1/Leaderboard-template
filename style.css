@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600;700&display=swap");
+
+:root {
+  --main-color: #700607;
+  --second-color: #1f1f1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(112, 6, 7);
+  background: linear-gradient(
+    180deg,
+    rgba(112, 6, 7, 1) 0%,
+    rgba(27, 27, 27, 1) 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  width: 70%;
+  margin: 67px auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 20px 0;
+  border-radius: 11px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h1 {
+  margin-left: 10px;
+}
+
+.container .top-3-header {
+  margin: 21px 0;
+  background-color: var(--main-color);
+  padding: 5px 10px;
+}
+.logo {
+  width: 50px;
+}
+
+.top3 {
+  width: 90%;
+  height: 360px;
+  margin-bottom: 23px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.top3_photo {
+  position: absolute;
+  z-index: 2;
+}
+
+.actual-top .name {
+  font-size: 16px;
+  width: 110%;
+  text-align: center;
+  background: var(--main-color);
+  color: white;
+  padding: 10px;
+  border-radius: 18px;
+}
+.actual-top {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top_3_all_img {
+  width: 100px;
+  border-radius: 50%;
+  border: 8px solid var(--main-color);
+  margin-bottom: 6px;
+}
+
+.score {
+  background-color: rgba(0, 0, 0, 0.424);
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  padding: 1% 2%;
+  border-radius: 7px;
+}
+.score-top {
+  margin-top: 10px;
+  width: 53%;
+  padding: 6px;
+  font-size: 18px;
+}
+
+a {
+  width: 23%;
+  cursor: pointer;
+}
+
+/* Crown above First One */
+.img-1 {
+  position: relative;
+}
+.crown {
+  position: absolute;
+  left: -2px;
+  width: 68px;
+  top: -28px;
+}
+
+.top3-1 {
+  height: 100%;
+  margin: 0 14px;
+  width: 115px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: all 1s ease-in;
+}
+
+#top1_div,
+#top2_div,
+#top3_div {
+  height: 0;
+  align-self: end;
+  visibility: hidden;
+  transition: height 0.7s ease-in;
+}
+
+.style-button {
+  position: absolute;
+  height: 115px;
+  z-index: 444;
+  width: 72%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+#gif {
+  position: absolute;
+  z-index: 200;
+  bottom: 0;
+  visibility: hidden;
+  transition: all 1s ease-in;
+  height: 251px;
+}
+
+#guess-box {
+  height: 107px;
+  width: 53%;
+  display: flex;
+  justify-content: center;
+}
+
+#guess-box span {
+  font-size: 27px;
+  align-self: flex-start;
+  animation: bounce 0.7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 15px, 0);
+  }
+}
+
+/* Second Section After Top3 */
+.section2 {
+  width: 90%;
+}
+.section-2-part {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #700607;
+  padding: 6px 15px;
+  border-radius: 10px;
+}
+
+.section-2-name {
+  display: flex;
+  align-items: center;
+}
+.section-2-name img {
+  width: 50px;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  width: 23%;
+}
+
+@media screen and (max-width: 599px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: auto;
+  }
+  .top3_photo {
+    width: 100%;
+    top: 16px;
+  }
+  .top3 {
+    height: 182px;
+    margin-bottom: 0;
+  }
+
+  header {
+    flex-direction: column;
+  }
+  .actual-top .name {
+    font-size: 10px;
+    width: 67px;
+    padding: 7px;
+    border-radius: 18px;
+  }
+
+  .score-top {
+    margin-top: 0;
+    border-radius: 7px;
+    font-size: 8px;
+    padding: 4px;
+    width: 49px;
+  }
+
+  .crown {
+    left: -5px;
+    width: 42px;
+    top: -12px;
+  }
+
+  .top3-1 {
+    width: 38px;
+  }
+
+  .top_3_all_img {
+    width: 54px;
+    margin-bottom: 0;
+  }
+
+  .guess-box {
+    height: 178px;
+  }
+  .section-2-part {
+    height: unset;
+    flex-direction: column;
+    width: 100%;
+    align-items: unset;
+  }
+
+  .section-2-part * {
+    margin-bottom: 10px;
+  }
+  .stars {
+    width: 100%;
+  }
+
+  #guess-box {
+    width: 69%;
+  }
+
+  #guess-box span {
+    font-size: 15px;
+  }
+}
